@@ -6,6 +6,7 @@ package leetcode;
 
         You are given a target value to search. If found in the array return true, otherwise return false.*/
 
+import leetcode.leetcode81_100.LargestRectangleHistogram_84;
 import org.junit.Test;
 import leetcode.leetcode81_100.RemoveDuplicatesSortedListII_82;
 import leetcode.leetcode81_100.RemoveDuplicatesSortedList_83;
@@ -13,7 +14,7 @@ import leetcode.leetcode81_100.SearchRotatedSortedArray_81;
 
 import static org.junit.Assert.*;
 
-public class Leetcode5 {
+public class LeetCode5 {
 
     @Test
     public void testSearchRotatedSortedArray(){
@@ -74,5 +75,11 @@ public class Leetcode5 {
         assertEquals(2, res2.next.val);
         assertEquals(3, res2.next.next.val);
         assertEquals(null, res2.next.next.next);
+    }
+
+    @Test
+    public void testLargestRectangleHistogram(){
+        int[] hist1 = new int[]{2,1,5,6,2,3};
+        LargestRectangleHistogram_84.largestRectangleArea(hist1);
     }
 }

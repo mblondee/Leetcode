@@ -18,6 +18,9 @@ package leetcode.leetcode81_100;
 // guess = i-1, if heights[guess] < heights[i] -> stop because index found
 // else: we try with new-guess = smallestIndexToTheLeft[guess], we don't need to try guess-1, guess-2, ...
 // we can just go the first one that is strictly smaller than heights[guess]
+// constructing the array is O(n)
+// in the for loop we will never have twice the same guess used in smallestIndexToTheLeft[i] = guess;
+// so the total of iterations in all of the while loops together is O(n)
 
 
 public class LargestRectangleHistogram_84 {

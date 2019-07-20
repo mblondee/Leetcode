@@ -10,10 +10,11 @@ package leetcode.leetcode81_100;
 // 2) find index r: the first index to the right (starting from i) such that heights[r] < heights[i]
 // -> the rectangle ends at index r-1
 // base: (r-1) - (l+1) + 1 = r-1-l-1+1 = r-l-1
+// height: heights[i]
 
 
 // how to efficiently calculate these left and right indices?
-// dynamic programming: eg smallestIndexToTheLeft[i]
+// eg smallestIndexToTheLeft[i]
 // guess = i-1, if heights[guess] < heights[i] -> stop because index found
 // else: we try with new-guess = smallestIndexToTheLeft[guess], we don't need to try guess-1, guess-2, ...
 // we can just go the first one that is strictly smaller than heights[guess]
@@ -22,8 +23,15 @@ package leetcode.leetcode81_100;
 public class LargestRectangleHistogram_84 {
     public static int largestRectangleArea(int[] heights) {
 
+        if(heights.length == 0){
+            return 0;
+        }
+
         int[] smallestIndexToTheLeft = new int[heights.length];
-        smallestIndexToTheLeft[0] = -1; // the are no indices to the left
+        int[] smallestIndexToTheRight = new int[heights.length];
+
+
+        smallestIndexToTheLeft[0] = -1; // there are no indices to the left
         for(int i = 1; i < heights.length; i++){
             int guess = i-1;
             while(guess >= 0 && heights[guess] >= heights[i]){
@@ -32,9 +40,23 @@ public class LargestRectangleHistogram_84 {
             smallestIndexToTheLeft[i] = guess;
         }
 
+        smallestIndexToTheRight[heights.length-1] = heights.length; // there are no indices to the right
+        for(int i = heights.length-2; i >=0; i--){
+            int guess = i+1;
+            while(guess < heights.length && heights[guess] >= heights[i]){
+                guess = smallestIndexToTheRight[guess];
+            }
+            smallestIndexToTheRight[i] = guess;
+        }
+
+        int currentMax = 0;
+        for(int i = 0; i < heights.length; i++){
+            currentMax = Math.max(currentMax,
+                    (smallestIndexToTheRight[i] - smallestIndexToTheLeft[i] - 1) * heights[i]);
+        }
 
 
-        return 0;
+        return currentMax;
 
     }
 }

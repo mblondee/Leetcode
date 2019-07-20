@@ -80,6 +80,9 @@ public class LeetCode5 {
     @Test
     public void testLargestRectangleHistogram(){
         int[] hist1 = new int[]{2,1,5,6,2,3};
-        LargestRectangleHistogram_84.largestRectangleArea(hist1);
+        assertEquals(10, LargestRectangleHistogram_84.largestRectangleArea(hist1));
+
+        int[] hist2 = new int[]{};
+        assertEquals(0, LargestRectangleHistogram_84.largestRectangleArea(hist2));
     }
 }

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class LeetCode361_380 {
+public class test_leetcode361_380 {
 
     @Test
     public void testGuessNumberHigherLower(){

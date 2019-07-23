@@ -7,6 +7,7 @@ package leetcode.Leetcode921_940;
 
 public class MinimumAreaRectangle_939 {
     public static int minAreaRect(int[][] points) {
+        return 0;
 
     }
 }

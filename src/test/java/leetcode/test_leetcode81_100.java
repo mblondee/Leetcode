@@ -1,5 +1,8 @@
 package leetcode;
 
+import leetcode.leetcode81_100.GrayCode_89;
+import leetcode.leetcode81_100.MergeSortedArrays_88;
+import leetcode.leetcode81_100.ScrambleString_87;
 import org.junit.Test;
 import leetcode.leetcode61_80.*;
 
@@ -276,4 +279,32 @@ public class test_leetcode81_100 {
         assertEquals(0, RemoveDuplicatesSortedArrayII_80.removeDuplicates(new int[]{}));
         assertEquals(7, RemoveDuplicatesSortedArrayII_80.removeDuplicates(new int[]{0,0,1,1,1,1,2,3,3}));
     }
+
+    @Test
+    public void testScrambleString(){
+        assertTrue(ScrambleString_87.isScramble("rgeat", "great"));
+        assertFalse(ScrambleString_87.isScramble("abcde", "caebd"));
+        assertTrue(ScrambleString_87.isScramble("abb", "bba"));
+    }
+
+    @Test
+    public void testMergeSortedArrays(){
+        int[] nums1 = new int[]{1,2,3,0,0,0};
+        int[] nums2 = new int[]{2,5,6};
+        MergeSortedArrays_88.merge(nums1, 3, nums2,3);
+
+        assertArrayEquals(new int[]{1,2,2,3,5,6},nums1);
+
+        nums1 = new int[]{1,2,3,0,0,0};
+        int[] nums3 = new int[]{};
+        MergeSortedArrays_88.merge(nums1, 3, nums3,0);
+        assertArrayEquals(new int[]{1,2,3,0,0,0}, nums1);
+    }
+
+    @Test
+    public void testGrayCode(){
+       GrayCode_89.grayCode(2);
+    }
+
+
 }

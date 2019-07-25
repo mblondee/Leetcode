@@ -1,10 +1,10 @@
 package leetcode;
 
+import leetcode.leetcode321_340.CountOfRangeSum_327;
 import leetcode.leetcode321_340.IncreasingTripletSubsequence_334;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class test_leetcode321_340 {
 
@@ -14,6 +14,11 @@ public class test_leetcode321_340 {
         assertFalse(IncreasingTripletSubsequence_334.increasingTriplet(new int[]{1,2}));
         assertFalse(IncreasingTripletSubsequence_334.increasingTriplet(new int[]{1,2,1,2,1}));
         assertTrue(IncreasingTripletSubsequence_334.increasingTriplet(new int[]{5,1,5,5,2,5,4}));
+    }
 
+    @Test
+    public void testCountOfRange(){
+        assertEquals(3, CountOfRangeSum_327.countRangeSum(new int[]{-2,5,-1}, -2,2));
+        assertEquals(3, CountOfRangeSum_327.countRangeSum(new int[]{-2147483647,0,-2147483647,2147483647}, -564, 3864));
     }
 }

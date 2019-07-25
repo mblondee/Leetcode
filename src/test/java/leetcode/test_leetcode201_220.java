@@ -1,9 +1,9 @@
 package leetcode;
 
-import leetcode.Leetcode201_220.ContainsDuplicateIII_220;
-import leetcode.Leetcode201_220.ContainsDuplicateII_219;
-import leetcode.Leetcode201_220.ContainsDuplicate_217;
-import leetcode.Leetcode201_220.IsomorphicStrings_205;
+import leetcode.leetcode201_220.ContainsDuplicateIII_220;
+import leetcode.leetcode201_220.ContainsDuplicateII_219;
+import leetcode.leetcode201_220.ContainsDuplicate_217;
+import leetcode.leetcode201_220.IsomorphicStrings_205;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

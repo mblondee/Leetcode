@@ -1,4 +1,4 @@
-package leetcode.Leetcode961_980;
+package leetcode.leetcode961_980;
 /*
 Given an array of integers A sorted in non-decreasing order,
         return an array of the squares of each number, also in sorted non-decreasing order.*/

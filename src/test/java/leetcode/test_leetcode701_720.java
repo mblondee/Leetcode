@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.Leetcode701_720.OneTwoBitCharacters_717;
+import leetcode.leetcode701_720.OneTwoBitCharacters_717;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

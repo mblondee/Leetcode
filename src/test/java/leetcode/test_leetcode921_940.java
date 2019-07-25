@@ -1,7 +1,7 @@
 package leetcode;
 
-import leetcode.Leetcode921_940.MinimumAreaRectangleII_940;
-import leetcode.Leetcode921_940.MinimumAreaRectangle_939;
+import leetcode.leetcode921_940.MinimumAreaRectangleII_940;
+import leetcode.leetcode921_940.MinimumAreaRectangle_939;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

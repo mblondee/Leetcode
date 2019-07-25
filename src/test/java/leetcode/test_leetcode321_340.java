@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.Leetcode321_340.IncreasingTripletSubsequence_334;
+import leetcode.leetcode321_340.IncreasingTripletSubsequence_334;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

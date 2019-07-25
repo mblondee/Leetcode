@@ -1,4 +1,4 @@
-package leetcode.Leetcode381_400;
+package leetcode.leetcode381_400;
 
 /*Design a data structure that supports all following operations in average O(1) time.
 

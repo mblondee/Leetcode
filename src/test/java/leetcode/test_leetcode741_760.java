@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.Leetcode741_760.CrackingTheSafe_753;
+import leetcode.leetcode741_760.CrackingTheSafe_753;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

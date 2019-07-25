@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.Leetcode961_980.SquaresSortedArray_977;
+import leetcode.leetcode961_980.SquaresSortedArray_977;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

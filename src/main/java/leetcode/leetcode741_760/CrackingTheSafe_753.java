@@ -1,4 +1,4 @@
-package leetcode.Leetcode741_760;
+package leetcode.leetcode741_760;
 
 /*There is a box protected by a password. The password is a sequence of n digits
         where each digit can be one of the first k digits 0, 1, ..., k-1.

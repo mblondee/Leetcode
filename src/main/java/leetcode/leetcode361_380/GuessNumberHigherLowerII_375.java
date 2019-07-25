@@ -1,4 +1,4 @@
-package leetcode.Leetcode361_380;
+package leetcode.leetcode361_380;
 
 /*We are playing the Guess Game. The game is as follows:
 

@@ -1,8 +1,8 @@
 package leetcode;
 
-import leetcode.Leetcode361_380.GuessNumberHigherLowerII_375;
-import leetcode.Leetcode361_380.GuessNumberHigherLower_374;
-import leetcode.Leetcode361_380.RandomizedSet_380;
+import leetcode.leetcode361_380.GuessNumberHigherLowerII_375;
+import leetcode.leetcode361_380.GuessNumberHigherLower_374;
+import leetcode.leetcode361_380.RandomizedSet_380;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

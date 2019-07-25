@@ -1,4 +1,4 @@
-package leetcode.Leetcode981_1000;
+package leetcode.leetcode981_1000;
 
 /*Given two lists of closed intervals, each list of intervals is pairwise disjoint and in sorted order.
 

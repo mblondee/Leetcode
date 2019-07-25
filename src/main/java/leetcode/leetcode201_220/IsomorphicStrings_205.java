@@ -1,4 +1,4 @@
-package leetcode.Leetcode201_220;
+package leetcode.leetcode201_220;
 
 /*Given two strings s and t, determine if they are isomorphic.
 

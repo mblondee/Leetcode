@@ -1,7 +1,7 @@
 package leetcode;
 
-import leetcode.Leetcode121_140.WordBreakII_140;
-import leetcode.Leetcode121_140.WordBreak_139;
+import leetcode.leetcode121_140.WordBreakII_140;
+import leetcode.leetcode121_140.WordBreak_139;
 import org.junit.Test;
 
 import java.util.ArrayList;

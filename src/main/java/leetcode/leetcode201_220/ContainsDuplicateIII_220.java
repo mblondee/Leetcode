@@ -1,4 +1,4 @@
-package leetcode.Leetcode201_220;
+package leetcode.leetcode201_220;
 
 /*Given an array of integers, find out whether there are two distinct indices i and j
         in the array such that the absolute difference between nums[i] and nums[j]

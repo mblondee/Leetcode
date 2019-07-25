@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.Leetcode381_400.RandomizedCollection_381;
+import leetcode.leetcode381_400.RandomizedCollection_381;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

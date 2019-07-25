@@ -1,6 +1,6 @@
 package leetcode;
 
-import leetcode.Leetcode981_1000.IntervalListIntersections_986;
+import leetcode.leetcode981_1000.IntervalListIntersections_986;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;

@@ -19,7 +19,6 @@ public class CountOfRangeSum_327 {
         }
 
         return helper(nums,0, nums.length-1, lower, upper, cumSum);
-
     }
 
     private static int helper(int[] nums, int start, int end, int lower, int upper, long[] cumSum){
@@ -56,4 +55,5 @@ public class CountOfRangeSum_327 {
         return count;
 
     }
+
 }

@@ -1,11 +1,11 @@
 package leetcode;
 
-import leetcode.leetcode1001_1100.FindInMountainArray_1095;
+import leetcode.leetcode1001_1020.FindInMountainArray_1095;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class test_leetcode1001_1095 {
+public class test_leetcode1001_1020 {
 
     @Test
     public void testFindInMountainArray(){

@@ -1,4 +1,4 @@
-package leetcode.leetcode1001_1100;
+package leetcode.leetcode1001_1020;
 
 /*You may recall that an array A is a mountain array if and only if:
 

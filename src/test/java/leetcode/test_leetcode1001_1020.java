@@ -1,23 +1,26 @@
 package leetcode;
 
-import leetcode.leetcode1001_1020.FindInMountainArray_1095;
+import leetcode.leetcode1001_1020.MaxConsecutiveOnesIII_1004;
+
+import leetcode.leetcode1001_1020.PartitionArrayIntoThreePartsWithEqualSum_1013;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class test_leetcode1001_1020 {
 
     @Test
-    public void testFindInMountainArray(){
-        assertEquals(2, FindInMountainArray_1095.findInMountainArray(
-                3, new MountainArray(new int[]{1,2,3,4,5,3,1})));
-        assertEquals(-1, FindInMountainArray_1095.findInMountainArray(
-                6, new MountainArray(new int[]{1,2,3,4,5,3,1})));
-        assertEquals(-1, FindInMountainArray_1095.findInMountainArray(
-                5, new MountainArray(new int[]{1,2,3,4,6,3,1})));
-        assertEquals(-1, FindInMountainArray_1095.findInMountainArray(
-                5, new MountainArray(new int[]{})));
-        assertEquals(4, FindInMountainArray_1095.findInMountainArray(
-                0, new MountainArray(new int[]{3,5,3,2,0})));
+    public void testMaxConsecutiveOnesIII(){
+        assertEquals(6, MaxConsecutiveOnesIII_1004.longestOnes(new int[]{1,1,1,0,0,0,1,1,1,1,0}, 2));
+        assertEquals(10, MaxConsecutiveOnesIII_1004.longestOnes(new int[]{0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1}, 3));
+        assertEquals(4, MaxConsecutiveOnesIII_1004.longestOnes(new int[]{0,0,0,1}, 4));
+    }
+
+    @Test
+    public void testPartitionArrayIntoThreePartsWithEqualSum(){
+        assertTrue(PartitionArrayIntoThreePartsWithEqualSum_1013.canThreePartsEqualSum(new int[]{0,2,1,-6,6,-7,9,1,2,0,1}));
+        assertFalse(PartitionArrayIntoThreePartsWithEqualSum_1013.canThreePartsEqualSum(new int[]{0,2,1,-6,6,7,9,-1,2,0,1}));
+        assertTrue(PartitionArrayIntoThreePartsWithEqualSum_1013.canThreePartsEqualSum(new int[]{3,3,6,5,-2,2,5,1,-9,4}));
+
     }
 }

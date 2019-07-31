@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.leetcode221_240.BasicCalculatorII_227;
 import leetcode.leetcode221_240.BasicCalculator_224;
 import leetcode.leetcode221_240.CountCompleteTreeNodes_222;
 import leetcode.leetcode221_240.InvertBinaryTree_226;
@@ -59,5 +60,15 @@ public class test_leetcode221_240 {
         assertEquals(23, BasicCalculator_224.calculate("(1+(4+5+2)-3)+(6+8)"));
 
         assertEquals(-4, BasicCalculator_224.calculate("1-(5)"));
+    }
+
+    @Test
+    public void testBasicCalculatorII(){
+        assertEquals(8, BasicCalculatorII_227.calculate("1+3+4"));
+
+        assertEquals(7, BasicCalculatorII_227.calculate("3+2*2"));
+        assertEquals(1, BasicCalculatorII_227.calculate("3/2"));
+        assertEquals(1, BasicCalculatorII_227.calculate(" 3/ 2"));
+        assertEquals(5, BasicCalculatorII_227.calculate(" 3+5/2"));
     }
 }

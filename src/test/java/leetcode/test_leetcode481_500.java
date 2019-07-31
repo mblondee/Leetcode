@@ -1,5 +1,6 @@
 package leetcode;
 
+import leetcode.leetcode481_500.MaxConsecutiveOnes_485;
 import leetcode.leetcode481_500.ReversePairs_493;
 import leetcode.leetcode481_500.TargetSum_494;
 import org.junit.Test;
@@ -19,5 +20,11 @@ public class test_leetcode481_500 {
     @Test
     public void testTargetSum(){
         assertEquals(5, TargetSum_494.findTargetSumWays(new int[]{1,1,1,1,1}, 3));
+    }
+
+    @Test
+    public void testMaxConsecutiveOnes(){
+        assertEquals(3, MaxConsecutiveOnes_485.findMaxConsecutiveOnes(new int[]{1,1,0,1,1,1}));
+        assertEquals(0, MaxConsecutiveOnes_485.findMaxConsecutiveOnes(new int[]{0,0,0,0,0,0}));
     }
 }

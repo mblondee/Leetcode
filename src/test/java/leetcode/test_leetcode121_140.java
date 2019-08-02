@@ -6,6 +6,8 @@ package leetcode;
 
         You are given a target value to search. If found in the array return true, otherwise return false.*/
 
+import leetcode.leetcode121_140.BinaryTreeMaximumPathSum_124;
+import leetcode.leetcode121_140.SumRootToLeafNumbers_129;
 import leetcode.leetcode81_100.*;
 import org.junit.Test;
 
@@ -104,5 +106,49 @@ public class test_leetcode121_140 {
 
         PartitionList_86.partition(head1, 3);
 
+    }
+
+    @Test
+    public void testBinaryTreeMaximumPathSum(){
+        TreeNode node = new TreeNode(-10);
+        node.left = new TreeNode(9);
+        node.right = new TreeNode(20);
+        node.right.left = new TreeNode(15);
+        node.right.right = new TreeNode(7);
+
+        BinaryTreeMaximumPathSum_124 path = new BinaryTreeMaximumPathSum_124();
+        assertEquals(42, path.maxPathSum(node));
+
+        TreeNode node1 = new TreeNode(1);
+        node1.left = new TreeNode(2);
+        node1.right = new TreeNode(3);
+
+        assertEquals(6, path.maxPathSum(node1));
+
+        TreeNode node2 = new TreeNode(-3);
+        assertEquals(-3, path.maxPathSum(node2));
+
+        TreeNode node3 = new TreeNode(2);
+        node3.left = new TreeNode(-1);
+        node3.right = new TreeNode(-2);
+
+        assertEquals(2, path.maxPathSum(node3));
+
+    }
+
+    @Test
+    public void testSumRootToLeafNumbers(){
+        TreeNode node = new TreeNode(1);
+        node.left = new TreeNode(2);
+        node.right = new TreeNode(3);
+        SumRootToLeafNumbers_129 sum = new SumRootToLeafNumbers_129();
+        assertEquals(25, sum.sumNumbers(node));
+
+        TreeNode node1 = new TreeNode(4);
+        node1.left = new TreeNode(9);
+        node1.right = new TreeNode(0);
+        node1.left.left = new TreeNode(5);
+        node1.left.right = new TreeNode(1);
+        assertEquals(1026, sum.sumNumbers(node1));
     }
 }

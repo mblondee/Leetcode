@@ -342,5 +342,41 @@ public class test_leetcode81_100 {
         assertEquals(0, UniqueBinarySearchTrees_96.numTrees(0));
     }
 
+    @Test
+    public void testIsValidBinarySearchTree(){
+
+        ValidateBinarySearchTree_98 bin = new ValidateBinarySearchTree_98();
+
+
+        TreeNode node = new TreeNode(2);
+        assertTrue(bin.isValidBST(node));
+        node.left = new TreeNode(1);
+
+
+        assertTrue(bin.isValidBST(node));
+
+        node.right = new TreeNode(3);
+        assertTrue(bin.isValidBST(node));
+
+        TreeNode node1 = new TreeNode(5);
+        node1.left = new TreeNode(1);
+        assertTrue(bin.isValidBST(node1));
+        node1.right = new TreeNode(4);
+        node1.right.left = new TreeNode(3);
+        node1.right.right = new TreeNode(6);
+        assertFalse(bin.isValidBST(node1));
+
+        TreeNode node2 = new TreeNode(10);
+        node2.left = new TreeNode(5);
+        node2.right = new TreeNode(15);
+        node2.right.left = new TreeNode(6);
+        node2.right.right = new TreeNode(20);
+        assertFalse(bin.isValidBST(node2));
+
+        TreeNode node3 = new TreeNode(Integer.MIN_VALUE);
+        assertTrue(bin.isValidBST(node3));
+
+    }
+
 
 }

@@ -1,8 +1,6 @@
 package leetcode;
 
-import leetcode.leetcode81_100.GrayCode_89;
-import leetcode.leetcode81_100.MergeSortedArrays_88;
-import leetcode.leetcode81_100.ScrambleString_87;
+import leetcode.leetcode81_100.*;
 import org.junit.Test;
 import leetcode.leetcode61_80.*;
 
@@ -304,6 +302,44 @@ public class test_leetcode81_100 {
     @Test
     public void testGrayCode(){
        GrayCode_89.grayCode(2);
+    }
+
+    @Test
+    public void testBinaryTreeInorderTraversal(){
+        TreeNode node = new TreeNode(1);
+        node.left = new TreeNode(2);
+        node.left.left = new TreeNode(5);
+        node.left.right = new TreeNode(6);
+        node.right = new TreeNode(3);
+
+
+        List<Integer> result = new ArrayList<>();
+        result.add(5);
+        result.add(2);
+        result.add(6);
+        result.add(1);
+        result.add(3);
+        List<Integer> inOrder = BinaryTreeInorderTraversal_94.inorderTraversal(node);
+        assertEquals(result.size(), inOrder.size());
+        for(int i = 0; i < result.size(); i++){
+            assertEquals(result.get(i), inOrder.get(i));
+        }
+
+        assertEquals(0, BinaryTreeInorderTraversal_94.inorderTraversal(null).size());
+    }
+
+    @Test
+    public void testUniqueBinarySearchTreesII(){
+        assertEquals(5, UniqueBinarySearchTreesII_95.generateTrees(3).size());
+        assertEquals(1, UniqueBinarySearchTreesII_95.generateTrees(1).size());
+        assertEquals(0, UniqueBinarySearchTreesII_95.generateTrees(0).size());
+    }
+
+    @Test
+    public void testUniqueBinarySearchTrees(){
+        assertEquals(5, UniqueBinarySearchTrees_96.numTrees(3));
+        assertEquals(1, UniqueBinarySearchTrees_96.numTrees(1));
+        assertEquals(0, UniqueBinarySearchTrees_96.numTrees(0));
     }
 
 

@@ -1,6 +1,7 @@
 package leetcode;
 
 import leetcode.leetcode141_160.BinaryTreePostorderTraversal_145;
+import leetcode.leetcode141_160.BinaryTreePreorderTraversal_144;
 import leetcode.leetcode141_160.EvaluateReversePolishNotation_150;
 import org.junit.Test;
 
@@ -36,6 +37,30 @@ public class test_leetcode141_160 {
         result.add(1);
 
         List<Integer> traversal = BinaryTreePostorderTraversal_145.postorderTraversal(node);
+        assertEquals(result.size(), traversal.size());
+        for(int i = 0; i < result.size(); i++){
+            assertEquals(result.get(i), traversal.get(i));
+        }
+    }
+
+    @Test
+    public void testBinaryTreePreorderTraversal(){
+        TreeNode node = new TreeNode(1);
+        node.left = new TreeNode(2);
+        node.left.left = new TreeNode(5);
+        node.left.right = new TreeNode(6);
+        node.right = new TreeNode(3);
+
+
+        List<Integer> result = new ArrayList<>();
+        result.add(1);
+        result.add(2);
+        result.add(5);
+        result.add(6);
+        result.add(3);
+
+        BinaryTreePreorderTraversal_144 path = new BinaryTreePreorderTraversal_144();
+        List<Integer> traversal = path.preorderTraversal(node);
         assertEquals(result.size(), traversal.size());
         for(int i = 0; i < result.size(); i++){
             assertEquals(result.get(i), traversal.get(i));

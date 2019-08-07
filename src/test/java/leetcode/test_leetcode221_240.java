@@ -1,9 +1,6 @@
 package leetcode;
 
-import leetcode.leetcode221_240.BasicCalculatorII_227;
-import leetcode.leetcode221_240.BasicCalculator_224;
-import leetcode.leetcode221_240.CountCompleteTreeNodes_222;
-import leetcode.leetcode221_240.InvertBinaryTree_226;
+import leetcode.leetcode221_240.*;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -70,5 +67,32 @@ public class test_leetcode221_240 {
         assertEquals(1, BasicCalculatorII_227.calculate("3/2"));
         assertEquals(1, BasicCalculatorII_227.calculate(" 3/ 2"));
         assertEquals(5, BasicCalculatorII_227.calculate(" 3+5/2"));
+    }
+
+    @Test
+    public void testSummaryRanges(){
+        SummaryRanges_228 range = new SummaryRanges_228();
+        assertEquals(3, range.summaryRanges(new int[]{0,1,2,4,5,7}).size());
+        assertEquals(4, range.summaryRanges(new int[]{0,2,3,4,6,8,9}).size());
+        assertEquals(0, range.summaryRanges(new int[]{}).size());
+        assertEquals(1, range.summaryRanges(new int[]{1}).size());
+    }
+
+    @Test
+    public void testkThSmallestElementBST(){
+        TreeNode node = new TreeNode(5);
+        node.left = new TreeNode(3);
+        node.right = new TreeNode(6);
+        node.left.left = new TreeNode(2);
+        node.left.right = new TreeNode(4);
+        node.left.left.left = new TreeNode(1);
+        KThSmallestElementBST_230 kth = new KThSmallestElementBST_230();
+        assertEquals(1, kth.kthSmallest(node, 1));
+        assertEquals(2, kth.kthSmallest(node, 2));
+        assertEquals(3, kth.kthSmallest(node, 3));
+        assertEquals(4, kth.kthSmallest(node, 4));
+        assertEquals(5, kth.kthSmallest(node, 5));
+        assertEquals(6, kth.kthSmallest(node, 6));
+
     }
 }

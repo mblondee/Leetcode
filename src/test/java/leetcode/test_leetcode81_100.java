@@ -378,5 +378,75 @@ public class test_leetcode81_100 {
 
     }
 
+    @Test
+    public void testSubsetII(){
+        SubsetsII_90 subset = new SubsetsII_90();
+        List<List<Integer>> result = subset.subsetsWithDup(new int[]{2,1,1});
+        assertEquals(6, result.size());
+    }
+
+    @Test
+    public void testDecodeWays(){
+        DecodeWays_91 decode = new DecodeWays_91();
+        assertEquals(2, decode.numDecodings("12"));
+        assertEquals(1, decode.numDecodings("29"));
+        assertEquals(1, decode.numDecodings("92"));
+        assertEquals(3, decode.numDecodings("226"));
+        assertEquals(0, decode.numDecodings("0"));
+        assertEquals(1, decode.numDecodings("10"));
+        assertEquals(0, decode.numDecodings("100"));
+        assertEquals(0, decode.numDecodings("012"));
+        assertEquals(5, decode.numDecodings("1212"));
+    }
+
+    @Test
+    public void testLinkedList(){
+        ReverseLinkedListII_92 reverse = new ReverseLinkedListII_92();
+        ListNode test = new ListNode(1);
+        test.next = new ListNode(2);
+        test.next.next = new ListNode(3);
+        test.next.next.next = new ListNode(4);
+        test.next.next.next.next = new ListNode(5);
+
+
+        ListNode res1 = reverse.reverseBetween(test, 2, 4);
+        assertEquals(1, res1.val);
+        assertEquals(4, res1.next.val);
+        assertEquals(3, res1.next.next.val);
+        assertEquals(2, res1.next.next.next.val);
+        assertEquals(5, res1.next.next.next.next.val);
+        assertEquals(null, res1.next.next.next.next.next);
+
+
+        test = new ListNode(1);
+        test.next = new ListNode(2);
+        test.next.next = new ListNode(3);
+        test.next.next.next = new ListNode(4);
+        test.next.next.next.next = new ListNode(5);
+        res1 = reverse.reverseBetween(test, 1, 4);
+        assertEquals(4, res1.val);
+        assertEquals(3, res1.next.val);
+        assertEquals(2, res1.next.next.val);
+        assertEquals(1, res1.next.next.next.val);
+        assertEquals(5, res1.next.next.next.next.val);
+        assertEquals(null, res1.next.next.next.next.next);
+
+
+        test = new ListNode(1);
+        test.next = new ListNode(2);
+        test.next.next = new ListNode(3);
+        test.next.next.next = new ListNode(4);
+        test.next.next.next.next = new ListNode(5);
+        res1 = reverse.reverseBetween(test, 1, 5);
+        assertEquals(5, res1.val);
+        assertEquals(4, res1.next.val);
+        assertEquals(3, res1.next.next.val);
+        assertEquals(2, res1.next.next.next.val);
+        assertEquals(1, res1.next.next.next.next.val);
+        assertEquals(null, res1.next.next.next.next.next);
+
+
+    }
+
 
 }

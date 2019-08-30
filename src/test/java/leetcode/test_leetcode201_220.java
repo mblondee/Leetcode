@@ -1,13 +1,9 @@
 package leetcode;
 
-import leetcode.leetcode201_220.ContainsDuplicateIII_220;
-import leetcode.leetcode201_220.ContainsDuplicateII_219;
-import leetcode.leetcode201_220.ContainsDuplicate_217;
-import leetcode.leetcode201_220.IsomorphicStrings_205;
+import leetcode.leetcode201_220.*;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class test_leetcode201_220 {
 
@@ -53,5 +49,33 @@ public class test_leetcode201_220 {
         1, Integer.MAX_VALUE));
         assertFalse(ContainsDuplicateIII_220.containsNearbyAlmostDuplicate(new int[]{2147483647, -2147483645},
                 1, 5));
+    }
+
+    @Test
+    public void testReverseLinkedList(){
+        ReverseLinkedList_206 reverse = new ReverseLinkedList_206();
+        ListNode test = new ListNode(1);
+        assertEquals(test, reverse.reverseList(test));
+        test.next = new ListNode(2);
+
+        ListNode test1 = reverse.reverseList(test);
+        assertEquals(2, test1.val);
+        assertEquals(1, test1.next.val);
+        assertEquals(null, test1.next.next);
+
+
+        test = new ListNode(1);
+        test.next = new ListNode(2);
+        test.next.next = new ListNode(3);
+        test.next.next.next = new ListNode(4);
+
+        ListNode testreverse = reverse.reverseList(test);
+        assertEquals(4, testreverse.val);
+        assertEquals(3, testreverse.next.val);
+        assertEquals(2, testreverse.next.next.val);
+        assertEquals(1, testreverse.next.next.next.val);
+        assertEquals(null, testreverse.next.next.next.next);
+
+
     }
 }

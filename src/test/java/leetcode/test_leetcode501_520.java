@@ -1,7 +1,10 @@
 package leetcode;
 
 import leetcode.leetcode501_520.FindBottomLeftTreeValue_513;
+import leetcode.leetcode501_520.FindModeInBinarySearchTree_501;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -33,5 +36,21 @@ public class test_leetcode501_520 {
 
         FindBottomLeftTreeValue_513 find2 = new FindBottomLeftTreeValue_513();
         assertEquals(-1, find2.findBottomLeftValue(node2));
+    }
+
+    @Test
+    public void testFindModeInBinarySearchTree(){
+        TreeNode node = new TreeNode(4);
+        node.left = new TreeNode(3);
+        node.right = new TreeNode(4);
+        node.left.left = new TreeNode(3);
+        node.left.right = new TreeNode(3);
+        node.left.left.left = new TreeNode(2);
+        node.left.left.right = new TreeNode(3);
+
+        FindModeInBinarySearchTree_501 find = new FindModeInBinarySearchTree_501();
+        int[] res = find.findMode(node);
+        assertEquals(1, res.length);
+        assertEquals(3, res[0]);
     }
 }

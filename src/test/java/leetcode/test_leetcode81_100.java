@@ -445,7 +445,34 @@ public class test_leetcode81_100 {
         assertEquals(1, res1.next.next.next.next.val);
         assertEquals(null, res1.next.next.next.next.next);
 
+    }
 
+    @Test
+    public void testSameTree(){
+        SameTree_100 tree = new SameTree_100();
+        TreeNode node1 = new TreeNode(1);
+        node1.left = new TreeNode(2);
+        node1.right = new TreeNode(3);
+
+        TreeNode node2 = new TreeNode(1);
+        node2.left = new TreeNode(2);
+        node2.right = new TreeNode(3);
+
+        assertTrue(tree.isSameTree(node1, node2));
+
+        node2.right.val = 4;
+        assertFalse(tree.isSameTree(node1, node2));
+
+        TreeNode node3 = new TreeNode(1);
+        node3.left = new TreeNode(2);
+
+        TreeNode node4 = new TreeNode(1);
+        node4.right = new TreeNode(2);
+        assertFalse(tree.isSameTree(node3, node4));
+
+        node3.right = new TreeNode(1);
+        node4.left = new TreeNode(1);
+        assertFalse(tree.isSameTree(node3, node4));
     }
 
 

@@ -1,15 +1,11 @@
 package leetcode;
 
-import leetcode.leetcode101_120.BinaryTreeLevelOrderTraversal_102;
-import leetcode.leetcode101_120.BinaryTreeZigZagLevelOrderTraversal_103;
-import leetcode.leetcode101_120.PathSumII_113;
-import leetcode.leetcode101_120.PathSum_112;
+import leetcode.leetcode101_120.*;
 import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class test_leetcode101_120 {
 
@@ -84,6 +80,44 @@ public class test_leetcode101_120 {
 
         PathSumII_113 path = new PathSumII_113();
         assertEquals(2, path.pathSum(node,22 ).size());
+
+    }
+
+    @Test
+    public void testSymmetricTree(){
+        SymmetricTree_101 symm = new SymmetricTree_101();
+
+        TreeNode node = new TreeNode(1);
+        node.left = new TreeNode(2);
+        node.right = new TreeNode(2);
+        node.left.left = new TreeNode(3);
+        node.left.right = new TreeNode(4);
+        node.right.left = new TreeNode(4);
+        node.right.right = new TreeNode(3);
+
+        assertTrue(symm.isSymmetric(node));
+
+        TreeNode node1 = new TreeNode(1);
+        node1.left = new TreeNode(2);
+        node1.right = new TreeNode(2);
+        node1.left.left = new TreeNode(3);
+        node1.right.left = new TreeNode(3);
+
+        assertFalse(symm.isSymmetric(node1));
+
+        assertTrue(symm.symm(node));
+        assertFalse(symm.symm(node1));
+
+        node1 = new TreeNode(1);
+        assertTrue(symm.symm(node1));
+        node1.right = new TreeNode(2);
+        assertFalse(symm.symm(node1));
+
+
+        node1.left = new TreeNode(2);
+        node1.left.left = new TreeNode(2);
+        node1.right.left = new TreeNode(2);
+        assertFalse(symm.symm(node1));
 
     }
 
